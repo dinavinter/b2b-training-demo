@@ -53,9 +53,9 @@ function showRegistration() {
 }
 
  
-function showLogin() {
+function showSelfRegistration() {
     var params = {
-        screenSet: "Default-RegistrationLogin",
+        screenSet: "Default-OrganizationRegistration",
         containerID: "div", 
         onAfterSubmit: showResponse
 
