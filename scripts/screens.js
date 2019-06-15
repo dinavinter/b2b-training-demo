@@ -42,6 +42,8 @@ async function showRegistration(containerID) {
             reject(eventObj.response);
             return;
         }
+        document.getElementById('div').innerHTML = "";
+
         var account= loadAccount().catch(reject);
         account .then(r=>setAccountVariables(r));
         account .then(r=>resolve(r));

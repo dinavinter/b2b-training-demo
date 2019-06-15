@@ -20,16 +20,13 @@
             loadAccount()
                 .then(showApps)
                 .catch(login);
-            //
-            // gigya.socialize.addEventHandlers({
-            //     onLogin:showApps
-            // });
 
         }
         
         function login() {
             showRegistration("div")
-                .then(showApps);
+                .then(showApps)
+                .catch(console.log);
         }
 
        function showApps(response){
@@ -67,8 +64,6 @@
                orgManage.style.display = "block";
            }
 
-           document.getElementById("div").innerText="";
-
 
        }
 
@@ -104,46 +99,48 @@
 <!--</div>-->
 
 
+<div  class="sidebar" id="portal" class="container my-4"  >
+    <h5><div id="logged-in-txt"></div></h5>
+
+    <div id="tile.Manage" class="container my-4" style="display: none; ">
+        <a href=#"  onclick="openDelegatedAdmin()" href="javascript:void(0);" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <h2 class="card-title"> Manage organization</h2>
+            </div>
+        </a>
+    </div>
+
+    <div id="tile.eCommerce" class="container my-4" style="display: none; ">
+        <a href="./eCommerce.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <h2 class="card-title"> eCommerce </h2>
+            </div>
+        </a>
+    </div>
+    <div id="tile.eLearning" class="container my-4" style="display: none; ">
+        <a href="./eLearning.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <h2 class="card-title">eLearning</h2>
+            </div>
+        </a>
+    </div>
+    <div id="tile.Orders" class="container my-4" style="display: none; ">
+        <a href="./Orders.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <h2 class="card-title">Orders</h2>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+
 <br /> <br /> <br />
 <div style="margin-left:500" >
     <div id="div"    >
 
     </div>
 
-    <div  class="sidebar" id="portal" class="container my-4"  >
-        <h5><div id="logged-in-txt"></div></h5>
-
-        <div id="tile.Manage" class="container my-4" style="display: none; ">
-            <a href=#"  onclick="openDelegatedAdmin()" href="javascript:void(0);" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h2 class="card-title"> Manage organization</h2>
-                </div>
-            </a>
-        </div>
-
-        <div id="tile.eCommerce" class="container my-4" style="display: none; ">
-            <a href="./eCommerce.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h2 class="card-title"> eCommerce </h2>
-                </div>
-            </a>
-        </div>
-        <div id="tile.eLearning" class="container my-4" style="display: none; ">
-            <a href="./eLearning.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h2 class="card-title">eLearning</h2>
-                </div>
-            </a>
-        </div>
-        <div id="tile.Orders" class="container my-4" style="display: none; ">
-            <a href="./Orders.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h2 class="card-title">Orders</h2>
-                </div>
-            </a>
-        </div>
-
-    </div>
 </div>
 
 

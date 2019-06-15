@@ -15,7 +15,11 @@
 		import {clientCfg} from "./scripts/configuration.js";
 
         getFunctionalRole(clientCfg.apps["eCommerce"])
-            .then(r=> document.getElementById('role').innerHTML= `<pre><code>${r}</code></pre>`);
+            .then(showResponse);
+
+        function showResponse(response) {
+            document.getElementById('role').innerHTML = "<pre>"+JSON.stringify(response, undefined, 2)+"</pre>";
+        }
 
     </script>
 
