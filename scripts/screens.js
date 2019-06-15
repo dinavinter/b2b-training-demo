@@ -10,11 +10,16 @@ function showGetAccountInfoResponse(response) {
 
  function showResponse(eventObj) {
     if (eventObj.response.errorCode == 0) {
+        document.getElementById('div').innerHTML = "<center> Request submitted</center>";
+    }
+}
+
+
+function showLoginResponse(eventObj) {
+    if (eventObj.response.errorCode == 0) {
         document.getElementById('div').innerHTML = "<center>Logged in UID: "+ eventObj.response.UID+"</center>";
     }
 }
- 
-
 function logout() {
     gigya.socialize.logout({onError: errorHandler, callbac:showGetAccountInfoResponse})
 }
@@ -32,7 +37,7 @@ function showProfile() {
 }
  
 function showAccountJson() { 
-    gigya.accounts.getAccountInfo({ callback:showGetAccountInfoResponse, regToken: regToken, include: "*" });
+    gigya.accounts.getAccountInfo({ callback:showGetAccountInfoResponse, include: "groups, *" });
 
 }
 
@@ -46,7 +51,7 @@ function showRegistration() {
         screenSet: "Default-RegistrationLogin",
         containerID: "div",
         startScreen: "gigya-register-screen",
-        onAfterSubmit: showResponse
+        onAfterSubmit: showLoginResponse
 
     }
     gigya.accounts.showScreenSet(params);
@@ -62,4 +67,10 @@ function showSelfRegistration() {
     }
     gigya.accounts.showScreenSet(params);
 }
+
+
+function openDelegatedAdmin() {
+    gigya.accounts.b2b.openDelegatedAdminLogin({orgId:g_orgId});
+}
+
 

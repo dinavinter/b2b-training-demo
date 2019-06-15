@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+
+    <title> eCommerce </title>
+
+    <script type="module" src="./scripts/authorization.js"  >    </script>
+    <!--<script type="module" src="./scripts/jwt.js"  type="module"> </script>-->
+    <script  type="text/javascript" src="./scripts/configuration.js" > </script>
+    <script type="module">
+
+        import {getFunctionalRole} from "./scripts/authorization.js";
+
+        getFunctionalRole(   )
+            .then(r=> document.getElementById('role').innerHTML= `<pre><code>${r}</code></pre>`);
+
+    </script>
+
+
 </head>
 <body>
+
+<div>
+    Role:
+<div id="role">
+
+</div>
+
+</div>
 
 </body>
 </html>

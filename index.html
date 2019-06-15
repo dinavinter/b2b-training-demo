@@ -3,22 +3,74 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css" />
 
     <title>B2B Training</title>
+    <script type="text/javascript" src="./scripts/configuration.js"> </script>
+    <script type="text/javascript" src="./scripts/loadGigya.js"> </script>
+    <script type="text/javascript" src="./scripts/screens.js"> </script>
+    <script type="text/javascript" src="./scripts/setAccount.js"> </script>
 
     <script type="text/javascript">
 
-        var apiKey = "3_KyWYMTqW8wGu68u64-CMNEe-OwheA9CDbQz1jY3kZHHyj8YCXaXk0IZDWjlXN-UZ";
-        var domain = "us1";
+       // //var apiKey = "3_KyWYMTqW8wGu68u64-CMNEe-OwheA9CDbQz1jY3kZHHyj8YCXaXk0IZDWjlXN-UZ";
+       //  var g_apiKey = "3_kkSKeD-UGbjbWrnnXD1nl7xOsitRcHhjUGlYNzVTH3wFLddMDnNXPVARspAdJ5O6";
+       //  var g_domain = "us1";
 
         var onGigyaServiceReady = function () {
-         }
+
+            gigya.accounts.getAccountInfo({ callback:showApps, include: "groups, *" });
+
+            gigya.socialize.addEventHandlers({
+                onLogin:showApps
+            });
+
+        }
+
+       function showApps(response){
+           if (response.errorCode != 0) {
+               return;
+           }
+
+           setAccountVariables(response);
+           var org = response["groups"]["organizations"][0];
+           var roles = org["roles"];
+           var orgId = org["orgId"];
+           g_orgId= orgId;
+           var eOrdId = document.getElementById("logged-in-txt");
+           eOrdId.append(`You are logged in to organization ${orgId}`);
+
+           var eCommerce = document.getElementById("tile.eCommerce");
+           var eLearning = document.getElementById("tile.eLearning");
+           var eOrders = document.getElementById("tile.Orders");
+           var orgManage = document.getElementById("tile.Manage");
+
+           function find_role(role) {
+               return roles.findIndex(function(e) {return e.toLowerCase() == role}) != -1;
+           }
+
+           if (find_role("manager")) {
+               eCommerce.style.display = "block";
+               eLearning.style.display = "block";
+               eOrders.style.display = "block";
+           } else if (find_role("technician")) {
+               eCommerce.style.display = "block";
+               eLearning.style.display = "block";
+           } else if (find_role("orgadmin")){
+               eCommerce.style.display = "block";
+               eLearning.style.display = "block";
+               eOrders.style.display = "block";
+               orgManage.style.display = "block";
+           }
+
+
+       }
+
 
     </script>
 
-    <script type="text/javascript" src="./scripts/loadGigya.js"> </script>
-    <script type="text/javascript" src="./scripts/screens.js"> </script>
 
 
 </head>
@@ -31,31 +83,70 @@
     <a onclick="showRegistration()" href="javascript:void(0);">Register / Login</a>
     <a onclick="showSelfRegistration()" href="javascript:void(0);">Request organization</a>
     <a onclick="showProfile()" href="javascript:void(0);">Show profile</a>
-    <a onclick="showGetUserInfoJson()" href="javascript:void(0);">Show account as json</a>
+    <a onclick="showAccountJson()" href="javascript:void(0);">Show account as json</a>
     <a onclick="logout()" href="javascript:void(0);">Logout</a>
 
 </div>
 
-<div class="sidebar">
+<!--<div class="sidebar">-->
 
-    <a href="#apps" class="header" >apps</a>
-    <a href="./eCommerce.html" > eCommerce </a>
-    <a href="./eLearning.html" > eLearning </a>
-    <a href="./Orders.html" > Orders </a>
+    <!--<a href="#apps" class="header" >apps</a>-->
+    <!--<a href="./eCommerce.html" > eCommerce </a>-->
+    <!--<a href="./eLearning.html" > eLearning </a>-->
+    <!--<a href="./Orders.html" > Orders </a>-->
 
-</div>
+<!--</div>-->
 
 
 <br /> <br /> <br />
 <div style="margin-left:500" >
     <div id="div"  >
+
+    </div>
+
+    <div id="portal" class="container my-4"  >
+        <h5><div id="logged-in-txt"></div></h5>
+
+        <div id="tile.Manage" class="container my-4" style="display: none; ">
+            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <h2 class="card-title"><a class="card-title" onclick="openDelegatedAdmin()" href="javascript:void(0);" > Manage your organization </a></h2>
+                </div>
+            </a>
+        </div>
+
+        <div id="tile.eCommerce" class="container my-4" style="display: none; ">
+            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <h2 class="card-title"><a class="card-title" href="./eCommerce.html" > eCommerce </a></h2>
+                </div>
+            </a>
+        </div>
+        <div id="tile.eLearning" class="container my-4" style="display: none; ">
+            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <h2 class="card-title"><a class="card-title" href="./eLearning.html" > eLearning </a></h2>
+                </div>
+            </a>
+        </div>
+        <div id="tile.Orders" class="container my-4" style="display: none; ">
+            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <h2 class="card-title"><a class="card-title" href="./Orders.html" > Orders </a></h2>
+                </div>
+            </a>
+        </div>
+
     </div>
 </div>
 
-<div name="tiles" >
 
-</div>
 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
 </body>

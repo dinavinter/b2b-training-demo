@@ -6,13 +6,13 @@ function loadGigya() {
     var domainParam = url.searchParams.get("domain");
 
     if (apiKeyParam) {
-        apiKey = apiKeyParam;
+        g_apiKey = apiKeyParam;
     }
     if (domainParam) {
-        domain = domainParam
+        g_domain = domainParam
     }
 
-    var gigurl = ("https://cdns." + domain + ".gigya.com/js/socialize.js?apikey=" + apiKey);
+    var gigurl = ("https://cdns." + g_domain + ".gigya.com/js/socialize.js?apikey=" + g_apiKey);
     document.write('<scr' + 'ipt type="text/javascript" src="' + gigurl + '"></scr' + 'ipt>');
  
 }
