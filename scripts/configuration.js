@@ -1,25 +1,28 @@
-var APP_NAMES = ["eCommerce", "eLearning", "Orders"];
+export let APP_NAMES = ["eCommerce", "eLearning", "Orders"];
 
-function get_cfg_var(varname) {
+export function get_cfg_var(varname) {
 	var item = localStorage.getItem(varname);
-	if (typeof(_g_is_cfg_page) == "undefined" || !_g_is_cfg_page) {
+	if (typeof(globalThis._g_is_cfg_page) == "undefined" || !_g_is_cfg_page) {
 		if (!item) {
-			debugger;
+			//debugger;
 			window.location.replace("./configuration.html");
 		}
 	}	
 	return item;
 }
+ 	
+export let clientCfg = {}, serverCfg = {};
 
-function load_all_cfg_to_globals() {
-	g_domain = get_cfg_var("domain");
-	g_apiKey = get_cfg_var("api_key");
-	g_clientId = get_cfg_var("client_id");
-	g_clientSecret = get_cfg_var("client_secret");
-    g_plainId = get_cfg_var("plainId");
-	g_apps = {};
+function load_all_cfg() {
+	clientCfg.domain = get_cfg_var("domain");
+	clientCfg.apiKey = get_cfg_var("api_key");
+	serverCfg.clientId = get_cfg_var("client_id");
+	serverCfg.clientSecret = get_cfg_var("client_secret");
+    serverCfg.plainId = get_cfg_var("plainId");
+	var apps = {};
+	clientCfg.apps = apps;
 	for (var i = 0; i < APP_NAMES.length; i++) {
-		g_apps[APP_NAMES[i]] = get_cfg_var("apps." + APP_NAMES[i]);
+		apps[APP_NAMES[i]] = get_cfg_var("apps." + APP_NAMES[i]);
 	}
 }
 
@@ -38,11 +41,6 @@ function load_default(){
             localStorage.setItem(varName, defaultValue);
         }
     }
-
-
-    }
-
-
-
+}
 load_default();
-load_all_cfg_to_globals();
+load_all_cfg();

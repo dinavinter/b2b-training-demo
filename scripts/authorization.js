@@ -1,4 +1,5 @@
-import  jwt  from './jwt.js';
+import create_client_jwt from './jwt.js';
+import {clientCfg, serverCfg} from "./configuration.js";
 
 export async function getFunctionalRole( )
 {
@@ -7,7 +8,7 @@ export async function getFunctionalRole( )
 
  async  function authorizationToken(app ,orgId, uid)
 {
-    var url= `https://${g_plainId}/runtime/${g_apiKey}/authorization/token/${app}`;
+    var url= `https://${serverCfg.plainId}/runtime/${clientCfg.apiKey}/authorization/token/${app}`;
     var body =  {
         "identity": {
             "type" :"user",
@@ -39,7 +40,7 @@ function postData(url , data  ) {
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
             'Content-Type': 'application/json',
-            'Authorization':  `Bearer ${jwt()}`
+            'Authorization':  "Bearer " + create_client_jwt(serverCfg.clientId, serverCfg.clientSecret)
          },
         redirect: 'follow',
         referrer: 'no-referrer',

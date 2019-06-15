@@ -1,16 +1,9 @@
-
-if (typeof(CryptoJS) == "undefined") {
-	var imported = document.createElement('script');
-	imported.src = './scripts/crypto-js.js';
-	document.head.appendChild(imported);
-	console.log(typeof(CryptoJS));
-
-}
 // require(["crypto-js"], function (CryptoJS) {
 //     console.log(CryptoJS.HmacSHA1("Message", "Key"));
 // });
 
-// import  {CryptoJS} from './crypto-js.js';
+import './crypto-js.js';
+
 
 
 function base64url(source) {
@@ -27,7 +20,7 @@ function base64url(source) {
     return encodedSource;
 }
 
-function create_client_jwt(clientId, clientSecret) {
+export default function create_client_jwt(clientId, clientSecret) {
 	var iat = Math.floor(new Date().getTime() / 1000);
 	var minutesToAdd = 5;
 	var exp = iat + minutesToAdd * 60;
@@ -60,4 +53,4 @@ function create_client_jwt(clientId, clientSecret) {
 	return jwt;
 }
 
-export default function jwt(){create_client_jwt(g_clientId, g_clientSecret)};
+//export default function jwt(){create_client_jwt(g_clientId, g_clientSecret)};

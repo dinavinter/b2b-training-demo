@@ -1,6 +1,4 @@
-
 ;(function (root, factory) {
-	debugger;
 	if (typeof exports === "object") {
 		// CommonJS
 		module.exports = exports = factory();
@@ -10,6 +8,10 @@
 		define([], factory);
 	}
 	else {
+		if (!root) {
+			// JS Module.
+			root = globalThis;
+		} 
 		// Global (browser)
 		root.CryptoJS = factory();
 	}
