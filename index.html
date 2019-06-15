@@ -11,22 +11,25 @@
     <script type="text/javascript" src="./scripts/configuration.js"> </script>
     <script type="text/javascript" src="./scripts/loadGigya.js"> </script>
     <script type="text/javascript" src="./scripts/screens.js"> </script>
-    <script type="text/javascript" src="./scripts/setAccount.js"> </script>
 
     <script type="text/javascript">
 
-       // //var apiKey = "3_KyWYMTqW8wGu68u64-CMNEe-OwheA9CDbQz1jY3kZHHyj8YCXaXk0IZDWjlXN-UZ";
-       //  var g_apiKey = "3_kkSKeD-UGbjbWrnnXD1nl7xOsitRcHhjUGlYNzVTH3wFLddMDnNXPVARspAdJ5O6";
-       //  var g_domain = "us1";
 
         var onGigyaServiceReady = function () {
 
-            gigya.accounts.getAccountInfo({ callback:showApps, include: "groups, *" });
+            loadAccount()
+                .then(showApps)
+                .catch(login);
+            //
+            // gigya.socialize.addEventHandlers({
+            //     onLogin:showApps
+            // });
 
-            gigya.socialize.addEventHandlers({
-                onLogin:showApps
-            });
-
+        }
+        
+        function login() {
+            showRegistration("div")
+                .then(showApps);
         }
 
        function showApps(response){
@@ -34,7 +37,6 @@
                return;
            }
 
-           setAccountVariables(response);
            var org = response["groups"]["organizations"][0];
            var roles = org["roles"];
            var orgId = org["orgId"];
@@ -65,8 +67,12 @@
                orgManage.style.display = "block";
            }
 
+           document.getElementById("div").innerText="";
+
 
        }
+
+
 
 
     </script>
@@ -80,7 +86,7 @@
 <div class="topnav">
     <a href="#screens" class="header" >screens</a>
 
-    <a onclick="showRegistration()" href="javascript:void(0);">Register / Login</a>
+    <a onclick="login()" href="javascript:void(0);">Register / Login</a>
     <a onclick="showSelfRegistration()" href="javascript:void(0);">Request organization</a>
     <a onclick="showProfile()" href="javascript:void(0);">Show profile</a>
     <a onclick="showAccountJson()" href="javascript:void(0);">Show account as json</a>
@@ -100,39 +106,39 @@
 
 <br /> <br /> <br />
 <div style="margin-left:500" >
-    <div id="div"  >
+    <div id="div"    >
 
     </div>
 
-    <div id="portal" class="container my-4"  >
+    <div   id="portal" class="container my-4"  >
         <h5><div id="logged-in-txt"></div></h5>
 
         <div id="tile.Manage" class="container my-4" style="display: none; ">
-            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <a href=#"  onclick="openDelegatedAdmin()" href="javascript:void(0);" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div class="card-body">
-                    <h2 class="card-title"><a class="card-title" onclick="openDelegatedAdmin()" href="javascript:void(0);" > Manage your organization </a></h2>
+                    <h2 class="card-title"> Manage organization</h2>
                 </div>
             </a>
         </div>
 
         <div id="tile.eCommerce" class="container my-4" style="display: none; ">
-            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <a href="./eCommerce.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div class="card-body">
-                    <h2 class="card-title"><a class="card-title" href="./eCommerce.html" > eCommerce </a></h2>
+                    <h2 class="card-title"> eCommerce </h2>
                 </div>
             </a>
         </div>
         <div id="tile.eLearning" class="container my-4" style="display: none; ">
-            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <a href="./eLearning.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div class="card-body">
-                    <h2 class="card-title"><a class="card-title" href="./eLearning.html" > eLearning </a></h2>
+                    <h2 class="card-title">eLearning</h2>
                 </div>
             </a>
         </div>
         <div id="tile.Orders" class="container my-4" style="display: none; ">
-            <a href=#" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <a href="./Orders.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div class="card-body">
-                    <h2 class="card-title"><a class="card-title" href="./Orders.html" > Orders </a></h2>
+                    <h2 class="card-title">Orders</h2>
                 </div>
             </a>
         </div>
