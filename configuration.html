@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <script>
+var _g_is_cfg_page = 1;
 function update_all() {
 	var cfgform = document.getElementById("cfgform");
 	var fields = cfgform.getElementsByClassName("cfgfield");
@@ -14,6 +15,9 @@ function update_all() {
 function goto_main_page() {
 	window.location.href="./index.html";
 }
+</script>
+<script type="module">
+import {APP_NAMES, get_cfg_var} from './scripts/configuration.js';
 window.onload = function(e) {
 	var eApps = document.getElementById("apps_list");
 	for (var i = 0; i < APP_NAMES.length; i++) {
@@ -39,9 +43,8 @@ window.onload = function(e) {
 		fields[i].value = get_cfg_var(fields[i].id);
 	}
 }
-_g_is_cfg_page = 1;
 </script>
-<script src="./scripts/configuration.js"></script>
+<script  type="module" src="./scripts/configuration.js" > </script>
 </head>
 <body>
 
