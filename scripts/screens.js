@@ -37,9 +37,9 @@ async function showRegistration(containerID) {
 
     });
 
-    function onCallback(response, resolve, reject){
-        if ( response.errorCode != 0) {
-            reject(response);
+    function onCallback(eventObj, resolve, reject){
+        if ( eventObj.response.errorCode != 0) {
+            reject(eventObj.response);
             return;
         }
         var account= loadAccount().catch(reject);
