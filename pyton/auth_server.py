@@ -1,4 +1,4 @@
-#pip install flask flask_sslify request
+#pip install flask flask_sslify flask_cors requests 
 
 
 from flask import Flask, Response, make_response, request
