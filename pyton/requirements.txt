@@ -2,3 +2,4 @@ flask
 flask_sslify
 flask_cors
 requests
+pyjwt
