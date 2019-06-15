@@ -1,9 +1,9 @@
 import create_client_jwt from './jwt.js';
 import {clientCfg, serverCfg} from "./configuration.js";
 
-export async function getFunctionalRole( )
+export async function getFunctionalRole(app)
 {
-    return authorizationToken(getCookie("app"),getCookie("orgId"), getCookie("uid") )
+    return authorizationToken(app, getCookie("orgId"), getCookie("uid") )
 }
 
  async  function authorizationToken(app ,orgId, uid)
@@ -25,7 +25,7 @@ function getCookie(name) {
     var cookies = document.cookie.split(';');
     for (var i=0; i < cookies.length; i++) {
         var c = cookies[i].split('=');
-        if (c[0] == name) {
+        if (c[0].trim() == name) {
             return c[1];
         }
     }

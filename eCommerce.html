@@ -12,8 +12,9 @@
     <script type="module">
 
         import {getFunctionalRole} from "./scripts/authorization.js";
+		import {clientCfg} from "./scripts/configuration.js";
 
-        getFunctionalRole(   )
+        getFunctionalRole(clientCfg.apps["eCommerce"])
             .then(r=> document.getElementById('role').innerHTML= `<pre><code>${r}</code></pre>`);
 
     </script>
