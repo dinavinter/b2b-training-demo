@@ -8,17 +8,26 @@ export async function getFunctionalRole(app)
 
  async  function authorizationToken(app ,orgId, uid)
 {
-    var url= `https://${serverCfg.plainId}/runtime/${clientCfg.apiKey}/authorization/token/${app}`;
-    var body =  {
-        "identity": {
-            "type" :"user",
-            "id":  uid
-        },
-        "context": {
-            "organization":  orgId
-        }};
-    return postData(url, body);
-
+    // var url= `https://${serverCfg.plainId}/runtime/${clientCfg.apiKey}/authorization/token/${app}`;
+    // var body =  {
+        // "identity": {
+            // "type" :"user",
+            // "id":  uid
+        // },
+        // "context": {
+            // "organization":  orgId
+        // }};
+    // return postData(url, body);        
+    
+	var url= `https://${serverCfg.plainId}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
+    //console.log(url);
+    return fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin', // include, *same-origin, omit
+    })
+    .then(response => response.json());
 }
 
 function getCookie(name) {
