@@ -19,11 +19,7 @@ function load_all_cfg() {
     serverCfg.clientId = get_cfg_var("client_id");
     serverCfg.clientSecret = get_cfg_var("client_secret");
     serverCfg.plainId = get_cfg_var("plainId");
-    var apps = {};
-    clientCfg.apps = apps;
-    for (var i = 0; i < APP_NAMES.length; i++) {
-        apps[APP_NAMES[i]] = get_cfg_var("apps." + APP_NAMES[i]);
-    }
+
 }
 
 function load_default(){
