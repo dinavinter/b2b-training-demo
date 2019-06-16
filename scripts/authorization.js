@@ -10,7 +10,7 @@ export async function getFunctionalRole(app)
 async  function authorizationToken(app ,orgId, uid)
 {
 
-    if(authServiceConfig.useAuthService)
+    if(authServiceConfig.useAuthService === "true")
     {
         return callAuthService(app, orgId, uid);
     }
