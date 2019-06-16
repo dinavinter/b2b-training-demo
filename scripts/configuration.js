@@ -32,9 +32,13 @@ function load_default(){
     set_default("api_key", "3_kkSKeD-UGbjbWrnnXD1nl7xOsitRcHhjUGlYNzVTH3wFLddMDnNXPVARspAdJ5O6");
     set_default("client_id","OvHHZLi5dcoVQP3iR60e2LHTUPuFPxJ8" );
     set_default("client_secret","5nAHJTrNukzEpOA74snLmRLWQkhvGOwI");
-    set_default("apps.eCommerce","1NOAHBNU8J0AJUENVRC9");
     set_default("plainId","us1api.b2b-gigya.com");
 
+    //apps
+    set_default("apps.eCommerce","1NOAHBNU8J0AJUENVRC9");
+    // set_default("apps.eCommerce","GY4ZO7QWZL3MRIIQWNOE");
+    set_default("apps.eLearning","5J4UPKH9EBPTW8N1P7PE");
+    set_default("apps.Orders","YBYHSTC7VJMWYLE3EHT0" );
 
     function set_default(varName, defaultValue) {
         if( !get_cfg_var(varName)){
