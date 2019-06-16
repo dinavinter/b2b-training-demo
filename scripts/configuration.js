@@ -2,12 +2,12 @@ export let APP_NAMES = ["eCommerce", "eLearning", "Orders"];
 
 export function get_cfg_var(varname) {
 	var item = localStorage.getItem(varname);
-	if (typeof(globalThis._g_is_cfg_page) == "undefined" || !_g_is_cfg_page) {
-		if (!item) {
-			//debugger;
-			window.location.replace("./configuration.html");
-		}
-	}	
+	// if (typeof(globalThis._g_is_cfg_page) == "undefined" || !_g_is_cfg_page) {
+	// 	 if (!item) {
+	// 	// 	//debugger;
+	// 	 	window.location.replace("./configuration.html");
+	// 	 }
+	// }
 	return item;
 }
  	
