@@ -1,6 +1,6 @@
 import create_client_jwt from './jwt.js';
-import {serverCfg} from "./configuration.js";
-import {clientCfg} from "./authServiceConfig.js";
+import {serverCfg, clientCfg} from "./configuration.js";
+import {clientCfg as authServiceConfig} from "./authServiceConfig.js";
 
 export async function getFunctionalRole(app)
 {
@@ -10,7 +10,7 @@ export async function getFunctionalRole(app)
 async  function authorizationToken(app ,orgId, uid)
 {
 
-    if(clientCfg.useAuthService)
+    if(authServiceConfig.useAuthService)
     {
         return callAuthService(app, orgId, uid);
     }
@@ -22,7 +22,7 @@ async  function authorizationToken(app ,orgId, uid)
 }
 
 function callAuthService(app, orgId, uid) {
-    const url = `https://${serverCfg.plainId}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
+    const url = `https://${authServiceConfig.serviceUrl}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
 
     return fetch(url, {
         method: 'POST',
