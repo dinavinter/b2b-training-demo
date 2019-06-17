@@ -11,15 +11,10 @@
     <script  type="module" src="./scripts/configuration.js" > </script>
     <script type="module">
 
-        import {getFunctionalRole} from "./scripts/authorization.js";
-		import {clientCfg} from "./scripts/configuration.js";
+       import {loadApp} from "./scripts/application.js";
 
-        getFunctionalRole(clientCfg.apps["eCommerce"])
-            .then(showResponse);
-
-        function showResponse(response) {
-            document.getElementById('role').innerHTML = "<pre>"+JSON.stringify(response, undefined, 2)+"</pre>";
-        }
+       loadApp("eCommerce",  document.getElementById('div'));
+    
 
     </script>
 
@@ -28,8 +23,8 @@
 <body>
 
 <div>
-    Role:
-<div id="role">
+    
+<div id="div">
 
 </div>
 

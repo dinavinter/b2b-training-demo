@@ -24,11 +24,17 @@ function showAccountJson() {
 
 async function showRegistration(containerID) {
 
+    var screenSet="Default-RegistrationLogin";
+    if(window.location.hash == "#invite")
+    {
+        screenSet= "Invite-RegistrationLogin"
+    }
+
     return new Promise((resolve, reject) => {
         var params = {
-            screenSet: "Default-RegistrationLogin",
+            screenSet: screenSet,
             containerID: containerID,
-            startScreen: "gigya-register-screen",
+            startScreen: "gigya-login-screen",
             include:"groups",
             onAfterSubmit: r=>onCallback(r, resolve, reject)
 

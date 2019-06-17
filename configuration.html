@@ -21,7 +21,7 @@ import {APP_NAMES, get_cfg_var} from './scripts/configuration.js';
 window.onload = function(e) {
 	var eApps = document.getElementById("apps_list");
 	for (var i = 0; i < APP_NAMES.length; i++) {
-		var eid = "apps." + APP_NAMES[i];
+		var eid = "app." + APP_NAMES[i];
 		var eLabel = document.createElement("label");
 		eLabel.setAttribute("for", eid);
 		eLabel.innerText = APP_NAMES[i];
@@ -33,6 +33,7 @@ window.onload = function(e) {
 		eApp.id = eid;
 		eApp.type = "text";
 		eApps.appendChild(eApp);
+		
 		//eApps.appendChild(document.createElement("br"));
 			
 	}
@@ -72,9 +73,14 @@ window.onload = function(e) {
 		<label for="client_secret">Client secret</label>
 		<input class="form-control cfgfield" id="client_secret" type="text"></input>
 	</div>
+
+	<div class="form-group">
+			<label for="portal">Portal app id</label>
+			<input class="form-control cfgfield" id="portal" type="text"></input>
+		</div>
 		
 		<!-- <b><u>Apps</u></b><br> -->
-		<div id="apps_list">
+		<div id="apps_list"  >
 		</div>
 	
 	<div class="form-group">

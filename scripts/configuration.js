@@ -1,4 +1,4 @@
-export let APP_NAMES = ["eCommerce", "eLearning", "Orders"];
+export let APP_NAMES = ["portal", "eCommerce", "eLearning", "Orders"]; 
 
 export function get_cfg_var(varname) {
 	var item = localStorage.getItem(varname);
@@ -15,31 +15,36 @@ export let clientCfg = {}, serverCfg = {};
 
 function load_all_cfg() {
 	clientCfg.domain = get_cfg_var("domain");
-	clientCfg.apiKey = get_cfg_var("api_key");
+    clientCfg.apiKey = get_cfg_var("api_key");
+    clientCfg.portal = get_cfg_var("portal");
+
 	serverCfg.clientId = get_cfg_var("client_id");
 	serverCfg.clientSecret = get_cfg_var("client_secret");
     serverCfg.plainId = get_cfg_var("plainId"); 
-	var apps = {};
-	clientCfg.apps = apps;
+    //var apps = {};
+    //
+	// clientCfg.apps = apps;
+	// for (var i = 0; i < APP_NAMES.length; i++) {
+	// 	apps[APP_NAMES[i]] = get_cfg_var("apps." + APP_NAMES[i]);
+    // }
+    
+    var app = {};
+
+	clientCfg.app = app;
 	for (var i = 0; i < APP_NAMES.length; i++) {
-		apps[APP_NAMES[i]] = get_cfg_var("apps." + APP_NAMES[i]);
+		app[APP_NAMES[i]] = get_cfg_var("app." + APP_NAMES[i]);
 	}
 }
 
 function load_default(){
 
     set_default("domain", "us1");
-    set_default("api_key", "3_kkSKeD-UGbjbWrnnXD1nl7xOsitRcHhjUGlYNzVTH3wFLddMDnNXPVARspAdJ5O6");
-    set_default("client_id","OvHHZLi5dcoVQP3iR60e2LHTUPuFPxJ8" );
-    set_default("client_secret","5nAHJTrNukzEpOA74snLmRLWQkhvGOwI");
+    set_default("api_key", "3_OnQvOXVIpn97YPJP6MYSMHLtYjuX0cusTWBfnm2PWJiO959CQOyMdJECTJJpwl3K");
+    set_default("client_id","0evun2M3mvCW6uuuIMIVBc8JYEIt2wCd" );
+    set_default("client_secret","E5T8O8jPyfJwRJPiJvxZ2sgthhsGrWJE");
     set_default("plainId","us1api.b2b-gigya.com");
-
-    //apps
-    set_default("apps.eCommerce","1NOAHBNU8J0AJUENVRC9");
-    // set_default("apps.eCommerce","GY4ZO7QWZL3MRIIQWNOE");
-    set_default("apps.eLearning","5J4UPKH9EBPTW8N1P7PE");
-    set_default("apps.Orders","YBYHSTC7VJMWYLE3EHT0" );
-
+    set_default("portal","V8DP1YJFD2TCAHYF02SX");
+    
     function set_default(varName, defaultValue) {
         if( !get_cfg_var(varName)){
             localStorage.setItem(varName, defaultValue);
