@@ -1,121 +1,71 @@
-
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
 
     <title>B2B Training</title>
-    <script type="module"  src="./scripts/configuration.js"> </script>
-    <script type="module" src="./scripts/loadGigya.js"> </script>
-    <script type="text/javascript" src="./scripts/screens.js"> </script>
-     
+    <script type="module" src="./scripts/configuration.js"></script>
+    <script type="module" src="./scripts/loadGigya.js"></script>
+    <script type="text/javascript" src="./scripts/screens.js"></script>
+
     <script type="module">
 
-        import {getFunctionalRole} from "./scripts/authorization.js";
+        import {get_assets} from "./scripts/authorization.js";
         import {clientCfg} from "./scripts/configuration.js";
-        import {get_apps} from "./scripts/portal.js";
 
 
-
-        
-        if(typeof gigya !=  "undefined"){ 
+        if (typeof gigya != "undefined") {
             load();
         }
         var onGigyaServiceReady = load;
 
 
-
-
-        //     function showResponse(auth) {
-        //     var eCommerce = document.getElementById("tile.eCommerce");
-        //     var eLearning = document.getElementById("tile.eLearning");
-        //     var eOrders = document.getElementById("tile.Orders");
-        //     var orgManage = document.getElementById("tile.Manage");
-           
-        //     set_app(auth, "eCommerce" , eCommerce);
-        //     set_app(auth, "eLearning" , eLearning);
-        //     set_app(auth, "Orders" , eOrders);
-        //     set_app(auth, "Organization Management" , orgManage);
-
-        // }
-
-        async function afterGetAccount(account){
+        async function afterGetAccount(account) {
             var org = account["groups"]["organizations"][0];
             var orgId = org["orgId"];
             var eOrdId = document.getElementById("logged-in-txt");
-            eOrdId.append(`You are logged in to organization ${orgId}`);
-           
-           var apps = await get_apps(account)
+            eOrdId.innerText= `You are logged in to organization ${orgId}`;
 
-            apps.forEach(app=> {
+            var apps = await get_assets(clientCfg.portal, "access");
+
+            apps.forEach(app => {
                 var appElement = document.getElementById(`tile.${app.appName}`);
-                appElement.href= app.url;
+                appElement.href = app.url;
                 localStorage.setItem(`app.${app.appName}`, JSON.stringify(app))
-                appElement.style.display = "block";   
+                appElement.style.display = "block";
             })
 
         }
 
         window.login = function login() {
             showRegistration("div")
-            .then(getAccount)
-            .catch(console.log);
+                .then(getAccount)
+                .catch(console.log);
         }
 
 
-        // function set_app(auth, appName, appElement) {
-               
-        //        var i=   
-        //          auth
-        //         .assets.templates[Object.keys(auth.assets.templates)[0]]
-        //         .actions.access
-        //         .findIndex(function(e) {return e.attributes.appName == appName});
-           
-           
-        //         if(i !== -1)
-        //         {
-        //             var app = auth.assets.templates[Object.keys(auth.assets.templates)[0]].actions.access[i];
-        //            appElement.href= app.attributes.url;
-        //            appElement.style.display = "block";                
-        //            localStorage.setItem(`app.${appName}`, JSON.stringify( app.attributes));
-        //         }
-        //         else
-        //         {
-        //            appElement.style.display = "none";                
-           
-        //         }
-        //       }
+        async function getAccount() {
 
-        async function getAccount(){
-
-           return loadAccount()
+            return loadAccount()
                 .then(afterGetAccount)
 
 
         }
 
-
-
-        function load(){
+        function load() {
 
             getAccount().catch(window.login);
 
-            gigya.accounts.addEventHandlers({ onLogin: loadAccount().then(afterGetAccount)});
+            gigya.accounts.addEventHandlers({onLogin: loadAccount().then(afterGetAccount)});
 
-}
-
-        
-
-     
-
-
+        }
 
 
     </script>
-
 
 
 </head>
@@ -123,33 +73,28 @@
 <body>
 
 <div class="topnav">
-    <a href="#screens" class="header" >screens</a>
+    <a href="#screens" class="header">screens</a>
 
-    <a onclick="login()" href="javascript:void(0);">Register / Login</a>
+    <a onclick="login()" href="javascript:void(0);">Login</a>
     <a onclick="showSelfRegistration()" href="javascript:void(0);">Request organization</a>
     <a onclick="showProfile()" href="javascript:void(0);">Show profile</a>
     <a onclick="showAccountJson()" href="javascript:void(0);">Show account as json</a>
-    <a  href="./configuration.html">Config</a>
+    <a href="./configuration.html">Config</a>
 
     <!--<a onclick="logout()" href="javascript:void(0);">Logout</a>-->
 
 </div>
 
-<!--<div class="sidebar">-->
-
-    <!--<a href="#apps" class="header" >apps</a>-->
-    <!--<a href="./eCommerce.html" > eCommerce </a>-->
-    <!--<a href="./eLearning.html" > eLearning </a>-->
-    <!--<a href="./Orders.html" > Orders </a>-->
-
-<!--</div>-->
 
 
-<div  class="sidebar" id="portal" class="container my-4"  >
-    <h5><div id="logged-in-txt"></div></h5>
+<div class="sidebar" id="portal" class="container my-4">
+    <h5>
+        <div id="logged-in-txt"></div>
+    </h5>
 
     <div id="tile.Organization Management" class="container my-4" style="display: none; ">
-        <a href=#"  onclick="openDelegatedAdmin()" href="javascript:void(0);" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <a  onclick="openDelegatedAdmin()" href="javascript:void(0);" class="card text-white bg-primary mb-3"
+           style="max-width: 20rem;">
             <div class="card-body">
                 <h2 class="card-title"> Manage organization</h2>
             </div>
@@ -181,21 +126,26 @@
 </div>
 
 
-<br /> <br /> <br />
-<div style="margin-left:500" >
-    <div id="div"    >
+<br/> <br/> <br/>
+<div style="margin-left:500">
+    <div id="div">
 
     </div>
 
 </div>
 
 
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+        <!--integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+        <!--crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+        <!--integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"-->
+        <!--crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+        <!--integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+        <!--crossorigin="anonymous"></script>-->
 
 
 </body>

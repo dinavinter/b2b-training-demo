@@ -34,6 +34,11 @@ function load_all_cfg() {
 	for (var i = 0; i < APP_NAMES.length; i++) {
 		app[APP_NAMES[i]] = get_cfg_var("app." + APP_NAMES[i]);
 	}
+
+	clientCfg.getApp = function (name) {
+	    return JSON.parse(app[name]);
+
+    }
 }
 
 function load_default(){

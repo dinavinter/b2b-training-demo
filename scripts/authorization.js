@@ -2,6 +2,20 @@ import create_client_jwt from './jwt.js';
 import {serverCfg, clientCfg} from "./configuration.js";
 import {clientCfg as authServiceConfig} from "./authServiceConfig.js";
 
+export async function get_assets(app ,action){
+    if (typeof getCookie("orgId") == "undefined" || typeof getCookie("uid") == "undefined" ) {
+        return;
+    }
+
+    var auth= await getFunctionalRole(app);
+
+    return auth
+        .assets.templates[Object.keys(auth.assets.templates)[0]]
+        .actions[action].map(e=>e.attributes);
+
+
+}
+
 export async function getFunctionalRole(app)
 {
     return authorizationToken(app, getCookie("orgId"), getCookie("uid") )

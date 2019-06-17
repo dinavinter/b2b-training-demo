@@ -11,10 +11,26 @@
     <script  type="module" src="./scripts/configuration.js" > </script>
     <script type="module">
 
-       import {loadApp} from "./scripts/application.js";
 
-       loadApp("eLearning",  document.getElementById('div'));
-    
+        import loadGigya from "./scripts/loadGigya.js"
+        import { get_assets} from "./scripts/authorization.js";
+        import { clientCfg} from "./scripts/configuration.js";
+
+        const app = clientCfg.getApp("eLearning");
+
+
+        async function loadApp() {
+            loadGigya(clientCfg.domain, app.apikey);
+
+            const assets = await get_assets();
+            const role = assets[0].roleName;
+            document.getElementById('div').innerHTML = `<pre>Welcome to ${app.appName} your role is ${role}</pre>`;
+
+        }
+
+        loadApp().catch(e=>document.getElementById('div').innerText=e)
+
+
 
     </script>
 
