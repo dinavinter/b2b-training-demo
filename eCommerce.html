@@ -18,9 +18,9 @@
         async function loadApp() {
            loadGigya(clientCfg.domain, app.apikey);
 
-            const assets = await get_assets();
+            const assets = await get_assets( app.appId, "access");
             const role = assets[0].roleName;
-            document.getElementById('div').innerHTML = `<pre>Welcome to ${app.appName} your role is ${role}</pre>`;
+            document.getElementById('div').innerHTML = `<pre>Welcome to ${app.appName} your role is "${role}"</pre>`;
 
        }
 

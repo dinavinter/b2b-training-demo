@@ -22,45 +22,47 @@
             load();
         }
         var onGigyaServiceReady = load;
+ 
 
+        window.getApps=getApps;
 
-        async function afterGetAccount(account) {
+        async function getApps() {
+
+            //get account 
+            var account= await loadAccount();
+ 
+            //set org id welcome text
             var org = account["groups"]["organizations"][0];
             var orgId = org["orgId"];
             var eOrdId = document.getElementById("logged-in-txt");
             eOrdId.innerText= `You are logged in to organization ${orgId}`;
 
+
+           //hide all tiles
+            var tiles = document.getElementsByClassName("tile");
+            for (let i = 0; i < tiles.length; i++) {
+                let value = tiles[i].value;
+                tiles[i].style.display = "none";
+            }
+
+             //get portal application assets
             var apps = await get_assets(clientCfg.portal, "access");
 
+            //vie athorized applications
             apps.forEach(app => {
-                var appElement = document.getElementById(`tile.${app.appName}`);
+                let appElement = document.getElementById(`tile.${app.appName}`);
                 appElement.href = app.url;
                 localStorage.setItem(`app.${app.appName}`, JSON.stringify(app))
                 appElement.style.display = "block";
             })
-
-        }
-
-        window.login = function login() {
-            showRegistration("div")
-                .then(getAccount)
-                .catch(console.log);
-        }
-
-
-        async function getAccount() {
-
-            return loadAccount()
-                .then(afterGetAccount)
-
-
+ 
         }
 
         function load() {
 
-            getAccount().catch(window.login);
+            gigya.accounts.addEventHandlers({onLogin:getApps});
 
-            gigya.accounts.addEventHandlers({onLogin: loadAccount().then(afterGetAccount)});
+            getApps().catch(()=>showRegistration());
 
         }
 
@@ -75,13 +77,16 @@
 <div class="topnav">
     <a href="#screens" class="header">screens</a>
 
-    <a onclick="login()" href="javascript:void(0);">Login</a>
+    <a onclick="showRegistration()" href="javascript:void(0);">Login</a>
+    <a onClick="getApps()" href="javascript:void(0);">Apps</a>
     <a onclick="showSelfRegistration()" href="javascript:void(0);">Request organization</a>
-    <a onclick="showProfile()" href="javascript:void(0);">Show profile</a>
     <a onclick="showAccountJson()" href="javascript:void(0);">Show account as json</a>
     <a href="./configuration.html">Config</a>
+    <a href="./authServiceConfig.html"Auth service config"</a>
 
-    <!--<a onclick="logout()" href="javascript:void(0);">Logout</a>-->
+<!--    <a onclick="logout()" href="javascript:void(0);">Logout</a>
+        <a onclick="showProfile()" href="javascript:void(0);">Show profile</a>
+-->
 
 </div>
 
@@ -92,7 +97,7 @@
         <div id="logged-in-txt"></div>
     </h5>
 
-    <div id="tile.Organization Management" class="container my-4" style="display: none; ">
+    <div id="tile.Organization Management" class="container my-4 tile" style="display: none; max-width: 20rem; "  >
         <a  onclick="openDelegatedAdmin()" href="javascript:void(0);" class="card text-white bg-primary mb-3"
            style="max-width: 20rem;">
             <div class="card-body">
@@ -101,21 +106,21 @@
         </a>
     </div>
 
-    <div id="tile.eCommerce" class="container my-4" style="display: none; ">
+    <div id="tile.eCommerce" class="container my-4 tile" style="display: none; max-width: 20rem;" >
         <a href="./eCommerce.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
             <div class="card-body">
                 <h2 class="card-title"> eCommerce </h2>
             </div>
         </a>
     </div>
-    <div id="tile.eLearning" class="container my-4" style="display: none; ">
+    <div id="tile.eLearning" class="container my-4 tile" style="display: none; max-width: 20rem;"  >
         <a href="./eLearning.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
             <div class="card-body">
                 <h2 class="card-title">eLearning</h2>
             </div>
         </a>
     </div>
-    <div id="tile.Orders" class="container my-4" style="display: none; ">
+    <div id="tile.Orders" class="container my-4 tile" style="display: none; max-width: 20rem;"  >
         <a href="./Orders.html" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
             <div class="card-body">
                 <h2 class="card-title">Orders</h2>

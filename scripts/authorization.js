@@ -9,9 +9,12 @@ export async function get_assets(app ,action){
 
     var auth= await getFunctionalRole(app);
 
+    if( typeof auth.assets.templates[Object.keys(auth.assets.templates)[0]] !== "undefined")
     return auth
         .assets.templates[Object.keys(auth.assets.templates)[0]]
         .actions[action].map(e=>e.attributes);
+
+  else return [{roleName:"no role"}]      ;
 
 
 }

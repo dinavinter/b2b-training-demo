@@ -22,7 +22,7 @@ function showAccountJson() {
 
 }
 
-async function showRegistration(containerID) {
+async function showRegistration() {
 
     var screenSet="Default-RegistrationLogin";
     if(window.location.hash == "#invite")
@@ -33,7 +33,7 @@ async function showRegistration(containerID) {
     return new Promise((resolve, reject) => {
         var params = {
             screenSet: screenSet,
-            containerID: containerID,
+            containerID: 'div',
             startScreen: "gigya-login-screen",
             include:"groups",
             onAfterSubmit: r=>onCallback(r, resolve, reject)
@@ -76,8 +76,8 @@ function showSelfRegistration() {
 }
 
 
-function openDelegatedAdmin() {
-    gigya.accounts.b2b.openDelegatedAdminLogin({orgId:g_orgId});
+function openDelegatedAdmint() {
+    gigya.accounts.b2b.openDelegatedAdminLogin({orgId:getCookie('orgId')});
 }
 
 
@@ -125,6 +125,15 @@ function errorHandler(e) {
 }
 
 
-
+function getCookie(name) {
+    var cookies = document.cookie.split(';');
+    for (var i=0; i < cookies.length; i++) {
+        var c = cookies[i].split('=');
+        if (c[0].trim() == name) {
+            return c[1];
+        }
+    }
+    return "";
+}
 
 

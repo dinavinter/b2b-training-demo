@@ -15,15 +15,15 @@
         import { get_assets} from "./scripts/authorization.js";
         import { clientCfg} from "./scripts/configuration.js";
 
-        const app = clientCfg.getApp("eLearning");
+        const app = clientCfg.getApp("Orders");
 
 
         async function loadApp() {
             loadGigya(clientCfg.domain, app.apikey);
 
-            const assets = await get_assets();
+            const assets = await get_assets( app.appId, "access");
             const role = assets[0].roleName;
-            document.getElementById('div').innerHTML = `<pre>Welcome to ${app.appName} your role is ${role}</pre>`;
+            document.getElementById('div').innerHTML = `<pre>Welcome to ${app.appName} your role is "${role}"</pre>`;
 
         }
 
