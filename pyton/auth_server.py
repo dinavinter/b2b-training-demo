@@ -20,8 +20,8 @@ def hello():
 @app.route("/token/<api_key>/<app_id>/<org_id>/<uid>", methods=["GET", "POST"])
 def auth_token(api_key, app_id, org_id, uid):            
     plainId = "us1api.b2b-gigya.com"
-    CLIENT_ID = "OvHHZLi5dcoVQP3iR60e2LHTUPuFPxJ8"
-    CLIENT_SECRET = "5nAHJTrNukzEpOA74snLmRLWQkhvGOwI"
+    CLIENT_ID = "0evun2M3mvCW6uuuIMIVBc8JYEIt2wCd"
+    CLIENT_SECRET = "E5T8O8jPyfJwRJPiJvxZ2sgthhsGrWJE"
     client_id = CLIENT_ID
     client_secret = CLIENT_SECRET
     
@@ -45,5 +45,5 @@ def auth_token(api_key, app_id, org_id, uid):
         
 if __name__ == "__main__":
     context = ('server3.crt', 'server3.key')
-    app.run( debug = True, ssl_context = context, port=4580)
+    app.run( debug = True, ssl_context = context, port=6580)
     #app.run( debug = True, ssl_context = 'adhoc')  # Generate Adhoc Certs

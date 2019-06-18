@@ -13,31 +13,14 @@ function update_all() {
 	}
 }
 function goto_main_page() {
-	window.location.href="./index.html";
+    update_all();
+    window.location.href="./index.html";
 }
 </script>
 <script type="module">
 import {APP_NAMES, get_cfg_var} from './scripts/configuration.js';
 window.onload = function(e) {
-	var eApps = document.getElementById("apps_list");
-	for (var i = 0; i < APP_NAMES.length; i++) {
-		var eid = "app." + APP_NAMES[i];
-		var eLabel = document.createElement("label");
-		eLabel.setAttribute("for", eid);
-		eLabel.innerText = APP_NAMES[i];
-		eApps.appendChild(eLabel);
-		
-		var eApp = document.createElement("input");
-		eApp.classList.add("form-control");
-		eApp.classList.add("cfgfield");
-		eApp.id = eid;
-		eApp.type = "text";
-		eApps.appendChild(eApp);
-		
-		//eApps.appendChild(document.createElement("br"));
-			
-	}
-	
+	  
 	var cfgform = document.getElementById("cfgform");
 	var fields = cfgform.getElementsByClassName("cfgfield");
 	for (var i = 0; i < fields.length; i++) {
@@ -79,13 +62,10 @@ window.onload = function(e) {
 			<input class="form-control cfgfield" id="portal" type="text"></input>
 		</div>
 		
-		<!-- <b><u>Apps</u></b><br> -->
-		<div id="apps_list"  >
-		</div>
+ 	 
 	
 	<div class="form-group">
-		<input type="button" value="Update" onclick="update_all()"></input>
-		<input type="button" value="Goto main page" onclick="goto_main_page()"></input>
+		<a href="./index.html" onclick="update_all()"> Go to main page </a>
 	</div>
 </form>
 

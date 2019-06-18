@@ -13,31 +13,14 @@ function update_all() {
 	}
 }
 function goto_main_page() {
+    update_all();
 	window.location.href="./index.html";
 }
 </script>
 <script type="module">
-import {APP_NAMES, get_cfg_var} from './scripts/configuration.js';
+import {get_cfg_var} from './scripts/authServiceConfig.js';
 window.onload = function(e) {
-	var eApps = document.getElementById("apps_list");
-	for (var i = 0; i < APP_NAMES.length; i++) {
-		var eid = "app." + APP_NAMES[i];
-		var eLabel = document.createElement("label");
-		eLabel.setAttribute("for", eid);
-		eLabel.innerText = APP_NAMES[i];
-		eApps.appendChild(eLabel);
-		
-		var eApp = document.createElement("input");
-		eApp.classList.add("form-control");
-		eApp.classList.add("cfgfield");
-		eApp.id = eid;
-		eApp.type = "text";
-		eApps.appendChild(eApp);
-		
-		//eApps.appendChild(document.createElement("br"));
-			
-	}
-	
+
 	var cfgform = document.getElementById("cfgform");
 	var fields = cfgform.getElementsByClassName("cfgfield");
 	for (var i = 0; i < fields.length; i++) {
@@ -45,7 +28,7 @@ window.onload = function(e) {
 	}
 }
 </script>
-<script  type="module" src="./scripts/configuration.js" > </script>
+<script  type="module" src="./scripts/authServiceConfig.js" > </script>
 </head>
 <body>
 
@@ -53,7 +36,7 @@ window.onload = function(e) {
 	
 	<div class="form-group">
 		<label for="comaind">Use auth service</label>
-		<input class="form-control cfgfield" id="useAuthService" type="text"></input>
+		<input class="form-control cfgfield" id="useAuthService" type="text" ></input>
 	</div>
 		
 	<div class="form-group">
@@ -62,29 +45,29 @@ window.onload = function(e) {
 	</div>
 				
 			
-	<div class="form-group">
-		<label for="comaind">Plain id URL</label>
-		<input class="form-control cfgfield" id="plainId" type="text"></input>
-	</div>
+	<!--<div class="form-group">-->
+		<!--<label for="comaind">Plain id URL</label>-->
+		<!--<input class="form-control cfgfield" id="plainId" type="text"></input>-->
+	<!--</div>-->
 
+	<!--<div class="form-group">-->
+		<!--<label for="api_key">API key</label>-->
+		<!--<input class="form-control cfgfield" id="api_key" type="text"></input>-->
+	<!--</div>		-->
+	<!---->
+	<!--<div class="form-group">-->
+		<!--<label for="client_id">Client Id</label>-->
+		<!--<input class="form-control cfgfield" id="client_id" type="text"></input>-->
+	<!--</div>-->
+	<!---->
+	<!--<div class="form-group">-->
+		<!--<label for="client_secret">Client secret</label>-->
+		<!--<input class="form-control cfgfield" id="client_secret" type="text"></input>-->
+	<!--</div> -->
+	<!---->
 	<div class="form-group">
-		<label for="api_key">API key</label>
-		<input class="form-control cfgfield" id="api_key" type="text"></input>
-	</div>		
-	
-	<div class="form-group">
-		<label for="client_id">Client Id</label>
-		<input class="form-control cfgfield" id="client_id" type="text"></input>
-	</div>
-	
-	<div class="form-group">
-		<label for="client_secret">Client secret</label>
-		<input class="form-control cfgfield" id="client_secret" type="text"></input>
-	</div> 
-	
-	<div class="form-group">
-		<input type="button" value="Update" onclick="update_all()"></input>
-		<input type="button" value="Goto main page" onclick="goto_main_page()"></input>
+		 <a href="./index.html" onclick="update_all()"> Go to main page </a>
+
 	</div>
 </form>
 
