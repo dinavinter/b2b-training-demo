@@ -46,10 +46,7 @@ async function callAuthService(app, orgId, uid) {
         mode: 'cors',
         cache: 'no-cache',
         credentials: 'same-origin',
-        headers: new Headers(
-            {"Content-Type": "application/json",
-                "Accept":"application/json"}
-        ),
+
        // credentials: 'same-origin',
     });
 
