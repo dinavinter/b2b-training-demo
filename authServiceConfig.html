@@ -1,21 +1,33 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script  type="module" src="./scripts/authServiceConfig.js" > </script>
 
-<script>
+<script >
 var _g_is_cfg_page = 1;
-function update_all() {
+ async function update_all() {
+ 
 	var cfgform = document.getElementById("cfgform");
 	var fields = cfgform.getElementsByClassName("cfgfield");
 	for (var i = 0; i < fields.length; i++) {
 		var value = fields[i].value;
 		localStorage.setItem(fields[i].id, value);
 	}
+
+	var url= `http://${localStorage.getItem('serviceUrl')}/creds/${document.getElementById('client_id').value}/${document.getElementById('client_secret').value}`;
+	var response= await fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin', 
+	 });
+	 
+	 window.location.href="./index.html";
+
 }
-function goto_main_page() {
-    update_all();
-	window.location.href="./index.html";
-}
+ 
+
+ 
 </script>
 <script type="module">
 import {get_cfg_var} from './scripts/authServiceConfig.js';
@@ -28,7 +40,6 @@ window.onload = function(e) {
 	}
 }
 </script>
-<script  type="module" src="./scripts/authServiceConfig.js" > </script>
 </head>
 <body>
 
@@ -61,7 +72,7 @@ window.onload = function(e) {
 
  
 	<div class="form-group">
-		 <a href="./index.html" onclick="update_all()"> Go to main page </a>
+		 <a href="#" onclick="update_all()"> Go to main page </a>
 
 	</div>
 </form>

@@ -4,6 +4,7 @@ from flask_cors import CORS
 import os
 import requests
 from client_jwt import create_client_jwt
+import json
 
 WEBDIR = os.path.abspath("../")
 
@@ -37,10 +38,15 @@ def route_all(path):
 @app.route("/token/<api_key>/<app_id>/<org_id>/<uid>", methods=["GET", "POST"])
 def auth_token(api_key, app_id, org_id, uid):            
     plainId = "us1api.b2b-gigya.com"
-    CLIENT_ID = "0evun2M3mvCW6uuuIMIVBc8JYEIt2wCd"
-    CLIENT_SECRET = "E5T8O8jPyfJwRJPiJvxZ2sgthhsGrWJE"
-    client_id = CLIENT_ID
-    client_secret = CLIENT_SECRET
+    #CLIENT_ID = "0evun2M3mvCW6uuuIMIVBc8JYEIt2wCd"
+    #CLIENT_SECRET = "E5T8O8jPyfJwRJPiJvxZ2sgthhsGrWJE"
+    #import pdb; pdb.set_trace()
+    with open('data.json') as json_file:  
+         data = json.load(json_file)
+
+    client_id = data['client_id']
+    client_secret = data['client_secret']
+
     
     auth_msg = {
         "identity": {
@@ -59,6 +65,16 @@ def auth_token(api_key, app_id, org_id, uid):
     res.headers = dict(resp.headers)
     return res, resp.status_code
 
+@app.route("/creds/<client_id>/<client_secret>", methods=["GET", "POST"])
+def set_creds(client_id, client_secret): 
+    data = {}           
+    data['client_id'] = client_id 
+    data['client_secret'] = client_secret
+
+    with open('data.json', 'w') as outfile:  
+         json.dump(data, outfile)
+  
+    return "200"
 
 if __name__ == "__main__":
      app.run(debug=True, port=4580)

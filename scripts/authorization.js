@@ -7,7 +7,7 @@ export async function get_assets(app ,action){
         return;
     }
 
-    var auth= await getFunctionalRole(app);
+    var auth= await authorizationToken(app, getCookie("orgId"), getCookie("uid") );
 
     if( typeof auth.assets.templates[Object.keys(auth.assets.templates)[0]] !== "undefined")
     return auth
@@ -17,12 +17,7 @@ export async function get_assets(app ,action){
   else return [{roleName:"no role"}]      ;
 
 
-}
-
-export async function getFunctionalRole(app)
-{
-    return authorizationToken(app, getCookie("orgId"), getCookie("uid") )
-}
+} 
 
 async  function authorizationToken(app ,orgId, uid)
 {
@@ -45,10 +40,8 @@ async function callAuthService(app, orgId, uid) {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
-        credentials: 'same-origin',
-
-       // credentials: 'same-origin',
-    });
+        credentials: 'same-origin'       
+     });
 
   return response.json();
 }
