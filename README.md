@@ -13,7 +13,7 @@ Config service to use auth-service using 'auth service config' page
 Change clientId and secret in b2b-training-demo\auth-server\auth_server.py
 install b2b-training-demo\rootCA.crt
 Then run
-b2b-training-demo\auth-server pip install requirments
+b2b-training-demo\auth-server pip install -r requirments q
 b2b-training-demo\auth-server auth_server.py
 
 
