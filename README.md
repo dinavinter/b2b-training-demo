@@ -7,26 +7,22 @@ To avoid CORS errors launch chrome with the following command:
 
 In order to config your site to work properly with the demo you need to add .*/github.io/* to trusted urls in site configuration, then use 'Config' to config your site details.
 
-**Working with auth service - ptyon (version 27)**
+**Working local**
 
-Config service to use auth-service using 'auth service config' page 
-Change clientId and secret in b2b-training-demo\auth-server\auth_server.py
-install b2b-training-demo\rootCA.crt
-Then run
-b2b-training-demo\auth-server pip install -r requirments q
-b2b-training-demo\auth-server auth_server.py
+**Installation**
+
+Clone repository and checkout branch develop_http
+
+Set your clientId and secret in b2b-training-demo\server\server.py
+run server\install.bat
 
 
-**Browse files locally:**
+**Run**
 
-**browse files using ptyon (version 27):**
-b2b-training-demo\pyton-browse  pip install requirments
-b2b-training-demo\pyton-browse  server.py
-browse https://localhost:4580/index.html
+Run server\run.bat
+
+Browse localhost:4580\index.html
  
-**browse files using c# (.net core):**
-b2b-training-demo\c#-browse dotnet run
-browse https://localhost:5001/index.html
 
 
 
