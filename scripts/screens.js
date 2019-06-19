@@ -76,7 +76,7 @@ function showSelfRegistration() {
 }
 
 
-function openDelegatedAdmint() {
+function openDelegatedAdmin() {
     gigya.accounts.b2b.openDelegatedAdminLogin({orgId:getCookie('orgId')});
 }
 
