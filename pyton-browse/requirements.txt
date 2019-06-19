@@ -2,5 +2,4 @@ flask
 flask_sslify
 flask_cors
 requests
-BaseHTTPServer
 pyjwt

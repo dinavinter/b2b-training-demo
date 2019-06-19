@@ -1,5 +1,3 @@
-#import BaseHTTPServer, SimpleHTTPServer
-#import ssl
 from flask import Flask, Response, make_response, request
 from flask_sslify import SSLify
 from flask_cors import CORS
@@ -36,6 +34,7 @@ def route_all(path):
     return "404"
 
 if __name__ == "__main__":
-    context = ('server3.crt', 'server3.key')
-    app.run(debug=True, ssl_context=context, port=4580)
+     app.run(debug=True, port=4580)
+    #context = ('server3.crt', 'server3.key')
+    #app.run(debug=True, ssl_context=context, port=4580)
     #app.run( debug = True, ssl_context = 'adhoc')  # Generate Adhoc Certs

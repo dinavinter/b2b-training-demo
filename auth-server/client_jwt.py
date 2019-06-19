@@ -36,8 +36,8 @@ def main():
 
     URL = "https://us1api.b2b-gigya.com/runtime/%s/authorization/token/%s" % (API_KEY, APP_ID)
     resp = requests.post(URL, json=body, headers={"Authorization": "Bearer %s" % encoded_jwt})
-    print resp
-    print resp.text
+    print(resp)
+    print(resp.text)
     
 if __name__ == "__main__":
     main()

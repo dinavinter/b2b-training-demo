@@ -38,15 +38,22 @@ async  function authorizationToken(app ,orgId, uid)
 
 }
 
-function callAuthService(app, orgId, uid) {
-    const url = `https://${authServiceConfig.serviceUrl}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
+async function callAuthService(app, orgId, uid) {
+    const url = `http://${authServiceConfig.serviceUrl}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
 
-    return fetch(url, {
+    var response= await fetch(url, {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
         credentials: 'same-origin',
-    }).then(response => response.json());
+        headers: new Headers(
+            {"Content-Type": "application/json",
+                "Accept":"application/json"}
+        ),
+       // credentials: 'same-origin',
+    });
+
+  return response.json();
 }
 
 function callPlainId(app, uid, orgId) {

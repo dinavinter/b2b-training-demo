@@ -44,6 +44,7 @@ def auth_token(api_key, app_id, org_id, uid):
 
         
 if __name__ == "__main__":
-    context = ('server3.crt', 'server3.key')
-    app.run( debug = True, ssl_context = context, port=6580)
+     app.run( debug = True, port=6580)
+    #context = ('server3.crt', 'server3.key')
+    #app.run( debug = True, ssl_context = context, port=6580)
     #app.run( debug = True, ssl_context = 'adhoc')  # Generate Adhoc Certs
