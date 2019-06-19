@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b63ff024-e3fb-4f05-97f5-4127ffc25dac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pyton-browse/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyton-browse/server3.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyton-browse/server3.key" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="D:\dvlp\b2b-training-demo\.idea\shelf/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="757987630">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="36" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.5" value="12" />
+          <entry key="project.open.time.6" value="9" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.opened" value="39" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="1" />
+          <entry key="csproj" value="1" />
+          <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="19" />
+          <entry key="js" value="23" />
+          <entry key="md" value="1" />
+          <entry key="pem" value="1" />
+          <entry key="py" value="4" />
+          <entry key="ts" value="1" />
+          <entry key="yml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ActionScript" value="4" />
+          <entry key="C#" value="1" />
+          <entry key="CSS" value="1" />
+          <entry key="Git file" value="1" />
+          <entry key="HTML" value="19" />
+          <entry key="JavaScript" value="23" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="TypeScript" value="1" />
+          <entry key="YAML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="1297" />
+          <entry key="js" value="1525" />
+          <entry key="py" value="1" />
+          <entry key="txt" value="172" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ActionScript" value="1" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1297" />
+          <entry key="JavaScript" value="1525" />
+          <entry key="PLAIN_TEXT" value="172" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+              <folding>
+                <element signature="e#637#691#0" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyton/client_jwt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyton/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="16" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pyton-browse/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Orders.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/authorization.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/jwt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/configuration.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" column="20" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/authServiceConfig.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/screens.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sidebar</find>
+      <find>stringi</find>
+      <find>showres</find>
+      <find>useAuthService</find>
+      <find>apps</find>
+      <find>loadAccount</find>
+      <find>getFunctionalRole</find>
+      <find>logged-in-txt</find>
+      <find>1234</find>
+      <find>10</find>
+      <find>10rem</find>
+      <find>getcoo</find>
+      <find>openDelegatedAdmin</find>
+      <find>for</find>
+      <find>cfgform</find>
+      <find>cfgfield</find>
+      <find>openDelegatedAdmint</find>
+      <find>serve</find>
+      <find>create_client_jwt</find>
+      <find>client_jwt</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/scripts/jwtGenerator.js" />
+        <option value="$PROJECT_DIR$/authorization.js" />
+        <option value="$PROJECT_DIR$/scripts/loadAccount.js" />
+        <option value="$PROJECT_DIR$/scripts/loadGigya.js" />
+        <option value="$PROJECT_DIR$/portal.html" />
+        <option value="$PROJECT_DIR$/configuration.html" />
+        <option value="$PROJECT_DIR$/scripts/crypto-js.js" />
+        <option value="$PROJECT_DIR$/scripts/jwt.js" />
+        <option value="$PROJECT_DIR$/scripts/setAccount.js" />
+        <option value="$PROJECT_DIR$/scripts/authServiceConfig.js" />
+        <option value="$PROJECT_DIR$/scripts/portal.js" />
+        <option value="$PROJECT_DIR$/scripts/authorization.js" />
+        <option value="$PROJECT_DIR$/scripts/configuration.js" />
+        <option value="$PROJECT_DIR$/eCommerce.html" />
+        <option value="$PROJECT_DIR$/eLearning.html" />
+        <option value="$PROJECT_DIR$/Orders.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/screens.js" />
+        <option value="$PROJECT_DIR$/pyton-browse/server.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="b2b-training-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b2b-training-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="b2b-training-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b2b-training-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pyton" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="b2b-training-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b2b-training-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pyton-browse" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/gigya/Config" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dvlp\b2b-training-demo\pyton-serve" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dvlp\b2b-training-demo\pyton" />
+      <recent name="D:\dvlp\b2b-training-demo\scripts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/b2b-training-demo/index.html">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b63ff024-e3fb-4f05-97f5-4127ffc25dac" name="Default Changelist" comment="" />
+      <created>1560537707032</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560537707032</updated>
+      <workItem from="1560537708296" duration="1745000" />
+      <workItem from="1560539510152" duration="1287000" />
+      <workItem from="1560542500942" duration="2216000" />
+      <workItem from="1560544742878" duration="1571000" />
+      <workItem from="1560546553621" duration="1788000" />
+      <workItem from="1560548680114" duration="1791000" />
+      <workItem from="1560550490547" duration="1647000" />
+      <workItem from="1560552469120" duration="1792000" />
+      <workItem from="1560554470740" duration="649000" />
+      <workItem from="1560579380850" duration="1844000" />
+      <workItem from="1560581265371" duration="1774000" />
+      <workItem from="1560583093059" duration="1771000" />
+      <workItem from="1560584916119" duration="1825000" />
+      <workItem from="1560586805257" duration="1765000" />
+      <workItem from="1560589996884" duration="751000" />
+      <workItem from="1560592881314" duration="1785000" />
+      <workItem from="1560594716071" duration="1791000" />
+      <workItem from="1560596539368" duration="1791000" />
+      <workItem from="1560598354949" duration="1790000" />
+      <workItem from="1560600169904" duration="1780000" />
+      <workItem from="1560613587169" duration="293000" />
+      <workItem from="1560614271878" duration="335000" />
+      <workItem from="1560665173243" duration="1797000" />
+      <workItem from="1560667041243" duration="1556000" />
+      <workItem from="1560670789294" duration="1751000" />
+      <workItem from="1560676122571" duration="1300000" />
+      <workItem from="1560678284174" duration="63000" />
+      <workItem from="1560681343745" duration="1777000" />
+      <workItem from="1560751113362" duration="1621000" />
+      <workItem from="1560752983248" duration="1473000" />
+      <workItem from="1560758398926" duration="709000" />
+      <workItem from="1560776309659" duration="770000" />
+      <workItem from="1560797215271" duration="875000" />
+      <workItem from="1560805859470" duration="1652000" />
+      <workItem from="1560808689342" duration="1359000" />
+      <workItem from="1560810713789" duration="1874000" />
+      <workItem from="1560813043582" duration="1423000" />
+      <workItem from="1560815068938" duration="1824000" />
+      <workItem from="1560820472635" duration="804000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1560539936995</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560539936995</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change apikey">
+      <created>1560542824054</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560542824054</updated>
+    </task>
+    <task id="LOCAL-00003" summary="scripts">
+      <created>1560542988697</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560542988697</updated>
+    </task>
+    <task id="LOCAL-00004" summary="https">
+      <created>1560543121506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1560543121506</updated>
+    </task>
+    <task id="LOCAL-00005" summary="self registration">
+      <created>1560543532550</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560543532550</updated>
+    </task>
+    <task id="LOCAL-00006" summary="self registration">
+      <created>1560543766232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560543766232</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cont">
+      <created>1560588418604</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560588418604</updated>
+    </task>
+    <task id="LOCAL-00008" summary="cont">
+      <created>1560588469265</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1560588469265</updated>
+    </task>
+    <task id="LOCAL-00009" summary="screens staf">
+      <created>1560598755082</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560598755082</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix register">
+      <created>1560599250126</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560599250126</updated>
+    </task>
+    <task id="LOCAL-00011" summary="staf">
+      <created>1560600696810</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560600696810</updated>
+    </task>
+    <task id="LOCAL-00012" summary="cleanup">
+      <created>1560600998870</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560600998870</updated>
+    </task>
+    <task id="LOCAL-00013" summary="toggle service">
+      <created>1560667401965</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560667401965</updated>
+    </task>
+    <task id="LOCAL-00014" summary="toggle service">
+      <created>1560667413362</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560667413362</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix cng">
+      <created>1560667562802</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560667562802</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix cng">
+      <created>1560667740625</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560667740625</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ssc">
+      <created>1560667935739</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560667935739</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ssc">
+      <created>1560681726429</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1560681726429</updated>
+    </task>
+    <task id="LOCAL-00019" summary="disable redirect">
+      <created>1560681904633</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1560681904633</updated>
+    </task>
+    <task id="LOCAL-00020" summary="cont">
+      <created>1560808725384</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1560808725384</updated>
+    </task>
+    <task id="LOCAL-00021" summary="cont">
+      <created>1560808766243</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1560808766243</updated>
+    </task>
+    <task id="LOCAL-00022" summary="cont">
+      <created>1560808805882</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1560808805882</updated>
+    </task>
+    <task id="LOCAL-00023" summary="cont">
+      <created>1560813447921</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1560813447921</updated>
+    </task>
+    <task id="LOCAL-00024" summary="cleanup">
+      <created>1560820931197</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1560820931197</updated>
+    </task>
+    <task id="LOCAL-00025" summary="auth service config">
+      <created>1560820988432</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1560820988432</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="56409000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.38244852" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="change apikey" />
+    <MESSAGE value="scripts" />
+    <MESSAGE value="https" />
+    <MESSAGE value="self registration" />
+    <MESSAGE value="screens staf" />
+    <MESSAGE value="fix register" />
+    <MESSAGE value="staf" />
+    <MESSAGE value="toggle service" />
+    <MESSAGE value="fix cng" />
+    <MESSAGE value="ssc" />
+    <MESSAGE value="disable redirect" />
+    <MESSAGE value="cont" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="auth service config" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth service config" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal.html" />
+    <entry file="file://$PROJECT_DIR$/scripts/crypto-js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="17109" column="17" selection-start-line="17109" selection-start-column="17" selection-end-line="17109" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/setAccount.js" />
+    <entry file="file://$PROJECT_DIR$/bower_components/crypto-js/crypto-js.js" />
+    <entry file="file://$PROJECT_DIR$/scripts/jwtGenerator.js" />
+    <entry file="file://$PROJECT_DIR$/pyton/jwt.py" />
+    <entry file="file://$PROJECT_DIR$/pyton/yourpemfile.pem" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/application.js" />
+    <entry file="file://$PROJECT_DIR$/scripts/loadGigya.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/portal.js" />
+    <entry file="file://$PROJECT_DIR$/eCommerce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b2b-training-demo.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" selection-start-line="8" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eLearning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" selection-start-line="14" selection-start-column="7" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/authorization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/jwt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/configuration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/authServiceConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/screens.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+          <folding>
+            <element signature="e#637#691#0" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyton/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyton/client_jwt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyton-browse/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
