@@ -12,7 +12,7 @@ In order to config your site to work properly with the demo you need to add .*/g
 **Installation**
 
 * Clone repository or create your own using "template repository"
-
+ 
 * Run server\install.bat
 
 
