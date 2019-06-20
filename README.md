@@ -11,10 +11,7 @@ In order to config your site to work properly with the demo you need to add .*/g
 
 **Installation**
 
-Clone repository and checkout branch develop_http
-
-Set your clientId and secret in b2b-training-demo\server\server.py
-
+Clone repository and checkout branch **develop_http**
 Run server\install.bat
 
 
