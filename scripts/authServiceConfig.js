@@ -17,7 +17,7 @@ function load_all_cfg() {
 function load_default(){
 
     set_default("serviceUrl", "https://localhost:4580");
-    set_default("useAuthService",true);
+    set_default("useAuthService",false);
  
 
 
