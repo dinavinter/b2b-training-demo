@@ -34,7 +34,7 @@ async  function authorizationToken(app ,orgId, uid)
 }
 
 async function callAuthService(app, orgId, uid) {
-    const url = `http://${authServiceConfig.serviceUrl}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
+    const url = `${authServiceConfig.serviceUrl}/token/${clientCfg.apiKey}/${app}/${orgId}/${uid}`;
 
     var response= await fetch(url, {
         method: 'POST',

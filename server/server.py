@@ -77,7 +77,7 @@ def set_creds(client_id, client_secret):
     return "200"
 
 if __name__ == "__main__":
-     app.run(debug=True, port=4580)
-    #context = ('server3.crt', 'server3.key')
-    #app.run(debug=True, ssl_context=context, port=4580)
+    # app.run(debug=True, port=4580)
+     context = ('server3.crt', 'server3.key')
+     app.run(debug=True, ssl_context=context, port=4580)
     #app.run( debug = True, ssl_context = 'adhoc')  # Generate Adhoc Certs

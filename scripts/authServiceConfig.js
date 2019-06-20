@@ -19,7 +19,7 @@ function load_all_cfg() {
 
 function load_default(){
 
-    set_default("serviceUrl", "localhost:4580");
+    set_default("serviceUrl", "https://localhost:4580");
     set_default("useAuthService",true);
 
     // set_default("api_key", "3_OnQvOXVIpn97YPJP6MYSMHLtYjuX0cusTWBfnm2PWJiO959CQOyMdJECTJJpwl3K");
