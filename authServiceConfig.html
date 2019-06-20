@@ -14,7 +14,7 @@ var _g_is_cfg_page = 1;
 		localStorage.setItem(fields[i].id, value);
 	}
 
-	var url= `http://${localStorage.getItem('serviceUrl')}/creds/${document.getElementById('client_id').value}/${document.getElementById('client_secret').value}`;
+	var url= `${localStorage.getItem('serviceUrl')}/creds/${document.getElementById('client_id').value}/${document.getElementById('client_secret').value}`;
 	var response= await fetch(url, {
         method: 'GET',
         mode: 'cors',
