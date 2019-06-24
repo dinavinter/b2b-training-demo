@@ -21,7 +21,8 @@ In order to config your site to work properly with the demo you need to add .*/g
 * Run server\run.bat
 
 * Browse localhost:4580\index.html
- 
+
+*  Go to 'Auth Service Config' set 'use athorization service' to true 
 
 
 
