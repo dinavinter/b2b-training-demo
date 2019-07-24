@@ -1,29 +1,43 @@
 # b2b-training-demo
+ 
+**Site config**
+* Create a new site in CDC
+* Go to "Site Settings" in CDC and add .*/github.io/* and .*/localhost/* to trusted urls
+* Enable site under "Organization management"
+* Follow wave 2 to build all policy 
+ 
+
+**Working on remote site**
 Demo published to https://dinavinter.github.io/b2b-training-demo
 
 To avoid CORS errors launch chrome with the following command:
 
-"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp  https://dinavinter.github.io/b2b-training-demo/index.html
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp  https://dinavinter.github.io/b2b-training-demo
 
-In order to config your site to work properly with the demo you need to add .*/github.io/* to trusted urls in site configuration, then use 'Config' to config your site details.
+**Web site setup**
+* Go to 'Auth Service Config' 
+    * set 'use athorization service' to false
+    * set clientId and clientSecret from site settings in plainId 
+* Go to "Client config"
+    * set your apiKey and domain  
 
 **Working local**
 
-**Installation**
-
 * Clone repository or create your own using "template repository"
- 
 * Run server\install.bat
+* In powershell:
+    * cd  .\server
+    * py .\server.py
 
-
-**Run**
-
-* Run server\run.bat
-
-* Browse localhost:4580\index.html
-
-*  Go to 'Auth Service Config' set 'use athorization service' to true 
-
-
+* Browse https:\\localhost:4580\index.html
+ 
+**Web site setup**
+* Go to 'Auth Service Config' 
+    * set 'use athorization service' to true
+    * set clientId and clientSecret from site settings in plainId 
+    * press on "go to mainPage"
+* Go to "Client config"
+    * set your apiKey and domain 
+    * press on "go to mainPage" 
 
 
